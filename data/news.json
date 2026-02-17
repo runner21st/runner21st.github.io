@@ -1,12 +1,30 @@
 [
   {
-    "date": "2026-02-17",
-    "title": "Website template initialized",
-    "note": "Replace this with your own updates."
+    "date": "2026-01",
+    "title": "BSR is accepted by ICRA 2026! "
   },
   {
-    "date": "2025-12-01",
-    "title": "Started a new research project",
-    "note": "Embodied AI / VLA."
+    "date": "2026-01",
+    "title": "SAGA is accepted by ICLR 2026! "
+  },
+  {
+    "date": "2025-12",
+    "title": "I was honored as an Outstanding Graduate Student of UESTC! (Top 10 out of 5,000+ students)."
+  },
+  {
+    "date": "2025-11",
+    "title": "Our paper “Graph Domain Adaptation via Homophily-Agnostic Reconstructing Structure” has been accepted as an Oral presentation at AAAI 2026! "
+  },
+  {
+    "date": "2025-06",
+    "title": "Received the Highest Honor Award in CCF Graph Machine Learning Conference!"
+  },
+  {
+    "date": "2025-05",
+    "title": "Two papers (CoE, MDGFM) are accepted by ICML 2025!"
+  },
+  {
+    "date": "2024-09",
+    "title": "InfoMGF is accepted by NeurIPS 2024!"
   }
 ]

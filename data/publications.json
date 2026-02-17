@@ -1,30 +1,83 @@
 [
   {
     "type": "preprint",
-    "year": "2026",
-    "month": "02",
-    "title": "Your Paper Title (Preprint)",
+    "year": "2025",
+    "month": "07",
+    "title": "Tactile-VLA: Unlocking Vision-Language-Action Model's Physical Knowledge for Tactile Generalization",
     "authors": [
-      "Your Name",
-      "Coauthor A",
-      "Coauthor B"
+      "Jialei Huang*",
+      "Shuo Wang*",
+      "Fanqi Lin",
+      "Yihang Hu",
+      "Chuan Wen",
+      "Yang Gao"
     ],
     "venue": "arXiv",
-    "note": "Keywords: VLA, Representation Learning",
-    "pdf": "https://arxiv.org/",
-    "code": "https://github.com/",
-    "project": ""
+    "note": "Robotics, VLA, Representation Learning",
+    "pdf": "https://arxiv.org/pdf/2507.09160",
+    "X project": "https://x.com/Jiumeng98/status/1973180748162347288"
+  },
+  {
+    "type": "conference",
+    "year": "2024",
+    "month": "09",
+    "title": "Beyond redundancy: Information-aware unsupervised multiplex graph structure learning",
+    "authors": "Zhixiang Shen*, Shuo Wang*, Zhao Kang",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS 2024)",
+    "note": "Graph Machine Learning, Representation Learning",
+    "pdf": "https://proceedings.neurips.cc/paper_files/paper/2024/file/380a0b16a7e6f8c5010f798c9f2d3c61-Paper-Conference.pdf",
+    "code": "https://github.com/zxlearningdeep/InfoMGF"
   },
   {
     "type": "conference",
     "year": "2025",
-    "month": "07",
-    "title": "Your Conference Paper",
-    "authors": "Your Name, Coauthor A",
-    "venue": "ICML",
-    "note": "(Oral / Spotlight / Poster — optional)",
-    "pdf": "",
-    "code": "",
-    "bibtex": ""
+    "month": "05",
+    "title": "Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment",
+    "authors": "Shuo Wang, Bokui Wang, Zhixiang Shen, Boyan Deng, Zhao Kang",
+    "venue": "International Conference on Machine Learning (ICML 2025)",
+    "note": "Foundation Models, Representation Learning",
+    "pdf": "https://arxiv.org/pdf/2502.02017",
+    "code": "https://github.com/wbkzwqtzw/MDGFM"
+  },
+  {
+    "type": "conference",
+    "year": "2025",
+    "month": "05",
+    "title": "Cooperation of Experts: Fusing Heterogeneous Information with Large Margin",
+    "authors": "Shuo Wang, Shunyang Huang, Jinghui Yuan, Zhixiang Shen, Zhao Kang",
+    "venue": "International Conference on Machine Learning (ICML 2025)",
+    "note": "Graph Machine Learning, Representation Learning",
+    "pdf": "https://arxiv.org/pdf/2505.20853?",
+    "code": "https://github.com/strangeAlan/CoE"
+  },
+  {
+    "type": "conference",
+    "year": "2026",
+    "month": "01",
+    "title": "Best of Sim and Real: Decoupled Visuomotor Manipulation via Learning Control in Simulation and Perception in Real",
+    "authors": "Jialei Huang, Zhaoheng Yin, Yingdong Hu, Shuo Wang, Xingyu Lin, Yang Gao",
+    "venue": "IEEE International Conference on Robotics and Automation (ICRA 2026)",
+    "note": "Robotics, Manipulation",
+    "pdf": "https://arxiv.org/pdf/2509.25747"
+  },
+  {
+    "type": "conference",
+    "year": "2025",
+    "month": "11",
+    "title": "Graph Domain Adaptation via Homophily-Agnostic Reconstructing Structure",
+    "authors": "Ruiyi Fang, Shuo Wang, Ruizhi Pu, Qiuhao Zeng, Hao Zheng, Ziyan Wang, Jiale Cai, Zhimin Mei, Song Tang, Charles Ling, Boyu Wang",
+    "venue": "(Oral) The 40th Annual AAAI Conference on Artificial Intelligence (AAAI 2026)",
+    "note": "Graph Machine Learning, Representation Learning",
+    "pdf": "https://arxiv.org/pdf/2602.07573"
+  },
+  {
+    "type": "conference",
+    "year": "2026",
+    "month": "02",
+    "title": "SAGA: Structural Aggregation Guided Alignment with Dynamic View and Neighborhood Order Selection for Multiview Graph Domain Adaptation",
+    "authors": "Ruiyi Fang, Jingyu Zhao, Shuo Wang, Ruizhi Pu, Bingheng Li, Jiale Cai, Zhihao Li, Zihao Jing, Jian Zhu, Song Tang, Charles Ling, Boyu Wang",
+    "venue": "The Fourteenth International Conference on Learning Representations (ICLR 2026)",
+    "note": "Graph Machine Learning, Representation Learning",
+    "pdf": "https://openreview.net/pdf?id=hC9Ny8iMLi"
   }
 ]

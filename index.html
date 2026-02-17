@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YOUR NAME · Academic Homepage</title>
+  <title>Shuo Wang · Academic Homepage</title>
   <meta name="description" content="Academic homepage of YOUR NAME. Research, publications, projects, news." />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/style.css" />
@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main">跳到正文</a>
+  <a class="skip-link" href="#main">Skip to homepage</a>
 
   <div class="layout">
     <aside class="sidebar">
@@ -20,19 +20,19 @@
           <img class="avatar" src="assets/avatar.jpg" alt="YOUR NAME portrait" />
         </div>
 
-        <h1 class="name">YOUR NAME</h1>
-        <p class="title">Student · University / Lab</p>
+        <h1 class="name">Shuo Wang</h1>
+        <h2 class="name">Runner21st</h2>
+        <p class="title">Incoming PhD Student · Tsinghua University / IIIS</p>
 
         <div class="links">
-          <a class="pill" href="mailto:you@university.edu" aria-label="Email">Email</a>
-          <a class="pill" href="https://scholar.google.com/" target="_blank" rel="noreferrer">Scholar</a>
-          <a class="pill" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="pill" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="pill" href="runner21st@gmail.com" aria-label="Email">Email</a>
+          <a class="pill" href="https://scholar.google.com/citations?user=IZB5CEMAAAAJ&hl=zh-CN" target="_blank" rel="noreferrer">Scholar</a>
+          <a class="pill" href="https://github.com/runner21st" target="_blank" rel="noreferrer">GitHub</a>
         </div>
 
         <div class="meta">
-          <div><span class="k">Location</span><span class="v">Tokyo / Anywhere</span></div>
-          <div><span class="k">Interests</span><span class="v">Embodied AI · Graph ML · RL</span></div>
+          <div><span class="k">Location</span><span class="v">Beijing</span></div>
+          <div><span class="k">Interests</span><span class="v">Robotics · Representation Learning · MLLMs</span></div>
         </div>
 
         <nav class="nav">
@@ -48,7 +48,7 @@
         <div class="footer">
           <span id="lastUpdated"></span>
           <span class="sep">·</span>
-          <a href="assets/CV.pdf" target="_blank" rel="noreferrer">CV</a>
+          <!-- <a href="assets/CV.pdf" target="_blank" rel="noreferrer">CV</a> -->
         </div>
       </div>
     </aside>
@@ -57,23 +57,17 @@
       <section id="about" class="section">
         <h2>About</h2>
         <p>
-          我是 <strong>YOUR NAME</strong>，目前在 <strong>University / Lab</strong> 从事研究。
-          研究兴趣包括 <em>Embodied AI</em>、<em>Vision-Language-Action</em>、<em>Graph ML</em>、<em>Reinforcement Learning</em> 等。
-          我关心“可泛化、可迁移、可验证”的智能体学习。
+          I am a final-year undergraduate student in the Everest Class, UESTC, supervised by Prof.Zhao Kang. I'm also an intern at Spirit AI.
+          I will join Institute for Interdisciplinary Information Sciences (IIIS), Tsinghua University this summer, advised by Prof.Yang Gao. 
+          My research focuses on Embodied AI, a frontier domain at the intersection of machine learning, robotics and computer vision. I'm also interested in Representation Learning and Learning theory.
+          My research objective is to develop logically complete intelligent agents capable of fundamentally transforming human ways of life.        
         </p>
-
-        <div class="callout">
-          <strong>快速替换指南：</strong>
-          1) 把 <code>assets/avatar.jpg</code> 换成你的头像；
-          2) 把侧边栏的姓名/链接/单位改掉；
-          3) 编辑 <code>data/*.json</code> 写你的新闻/论文/项目。
-        </div>
       </section>
 
       <section id="news" class="section">
         <div class="section-head">
           <h2>News</h2>
-          <button class="btn" data-action="toggle-all" data-target="newsList">展开/收起</button>
+          <button class="btn" data-action="toggle-all" data-target="newsList">Unfold</button>
         </div>
         <div id="newsList" class="list"></div>
       </section>
@@ -82,9 +76,9 @@
         <div class="section-head">
           <h2>Publications</h2>
           <div class="controls">
-            <input class="input" id="pubSearch" placeholder="搜索标题/作者/venue…" />
+            <input class="input" id="pubSearch" placeholder="Plz search title/author/venue…" />
             <select class="select" id="pubFilter">
-              <option value="all">全部</option>
+              <option value="all">ALL</option>
               <option value="conference">Conference</option>
               <option value="journal">Journal</option>
               <option value="preprint">Preprint</option>
@@ -95,37 +89,58 @@
         <div id="pubList" class="list"></div>
       </section>
 
-      <section id="projects" class="section">
-        <div class="section-head">
-          <h2>Projects</h2>
-          <input class="input" id="projSearch" placeholder="搜索项目…" />
-        </div>
-        <div id="projGrid" class="grid"></div>
-      </section>
 
-      <section id="teaching" class="section">
-        <h2>Teaching</h2>
-        <ul class="bullets">
-          <li>Course A (TA), 2025 Fall</li>
-          <li>Course B (Guest lecture), 2024 Spring</li>
+      <section id="honors and awards">
+        <h2>Honors & Awards</h2>
+        <ul class="honor-list">
+          <li>
+            <span class="honor-year">2026</span>
+            <span class="honor-text">
+              Outstanding Role Model Award, UESTC
+            </span>
+          </li>
+          <li>
+            <span class="honor-year">2025</span>
+            <span class="honor-text">
+              Outstanding Graduate Student of UESTC (Top 10 / 5000+)
+              First-Class Outstanding Student Scholarship of UESTC, 2024-2025
+              Highest Honor Award, CCF Graph Machine Learning Conference 
+              YanBao Corporate Scholarship, 2024-2025
+            </span>
+          </li>
+          <li>
+            <span class="honor-year">2024</span>
+            <span class="honor-text">
+              National Scholarship, 2023-2024
+              First-Class Outstanding Student Scholarship of UESTC, 2023-2024
+              IEEEXtreme Programming Award, Silver medal of China region, 12nd Place among 17000+ teams from all world
+            </span>
+          </li>
+          <li>
+            <span class="honor-year">2023</span>
+            <span class="honor-text">
+              National Scholarship, 2022-2023
+              First-Class Outstanding Student Scholarship of UESTC, 2022-2023
+              Join the Everest Program (珠峰计划) Honor Class
+            </span>
+          </li>
         </ul>
       </section>
 
       <section id="service" class="section">
         <h2>Service</h2>
         <ul class="bullets">
-          <li>Reviewer: NeurIPS / ICLR / ICML (example)</li>
-          <li>Volunteer: Conference X</li>
+          <li>Reviewer: ICLR 2026</li>
         </ul>
       </section>
 
       <section id="misc" class="section">
         <h2>Misc</h2>
         <p>
-          你可以在这里放一些“非论文”的内容：开源、写作、演讲、比赛、兴趣等。
+           Interested in literature and history. Feel free to contact me and communicate!
         </p>
         <div class="tiny">
-          © <span id="year"></span> YOUR NAME · Built with pure HTML/CSS/JS · Hosted on GitHub Pages
+          © <span id="year"></span> Shuo Wang · Built with pure HTML/CSS/JS · Hosted on GitHub Pages
         </div>
       </section>
     </main>
