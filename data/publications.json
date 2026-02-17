@@ -1,0 +1,30 @@
+[
+  {
+    "type": "preprint",
+    "year": "2026",
+    "month": "02",
+    "title": "Your Paper Title (Preprint)",
+    "authors": [
+      "Your Name",
+      "Coauthor A",
+      "Coauthor B"
+    ],
+    "venue": "arXiv",
+    "note": "Keywords: VLA, Representation Learning",
+    "pdf": "https://arxiv.org/",
+    "code": "https://github.com/",
+    "project": ""
+  },
+  {
+    "type": "conference",
+    "year": "2025",
+    "month": "07",
+    "title": "Your Conference Paper",
+    "authors": "Your Name, Coauthor A",
+    "venue": "ICML",
+    "note": "(Oral / Spotlight / Poster — optional)",
+    "pdf": "",
+    "code": "",
+    "bibtex": ""
+  }
+]

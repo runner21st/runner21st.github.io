@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Project Name A",
+    "desc": "One-line description of what you built / discovered. Emphasize your unique contribution.",
+    "url": "https://github.com/",
+    "tags": [
+      "Embodied AI",
+      "VLA",
+      "Sim2Real"
+    ]
+  },
+  {
+    "title": "Project Name B",
+    "desc": "One-line description. Add a demo link if you have one.",
+    "url": "",
+    "tags": [
+      "Graph ML",
+      "Foundation Models"
+    ]
+  }
+]
