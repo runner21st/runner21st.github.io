@@ -189,7 +189,7 @@ p { margin: 0 0 0.85rem; }
 }
 .text-button:hover { text-decoration: underline; text-underline-offset: 3px; }
 .section-note {
-  margin: -8px 0 17px;
+  margin: -8px 0 20px;
   color: var(--muted);
   font-size: 13px;
 }
@@ -212,6 +212,54 @@ p { margin: 0 0 0.85rem; }
 .news-text { color: #313438; }
 .news-row.is-extra[hidden] { display: none; }
 
+.publication-groups {
+  display: grid;
+  gap: 38px;
+}
+.publication-group {
+  min-width: 0;
+}
+.pub-group-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #dfe3e8;
+}
+.pub-group-title {
+  margin: 0;
+  color: #1a1d21;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 720;
+  letter-spacing: -0.015em;
+}
+.major-label {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 7px;
+  border: 1px solid #cfe0f6;
+  border-radius: 999px;
+  background: #f4f8fd;
+  color: #245b9f;
+  font-size: 10px;
+  font-weight: 760;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: 2px;
+}
+.pub-group-description {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+.pub-count {
+  flex: 0 0 auto;
+  color: var(--soft);
+  font-size: 12px;
+}
+
 .publication-list {
   display: grid;
   gap: 0;
@@ -223,7 +271,7 @@ p { margin: 0 0 0.85rem; }
   padding: 22px 0;
   border-top: 1px solid #eef0f3;
 }
-.publication:first-child { border-top: 0; padding-top: 2px; }
+.publication:first-child { border-top: 0; padding-top: 18px; }
 .pub-year {
   padding-top: 3px;
   color: var(--muted);
@@ -310,48 +358,6 @@ p { margin: 0 0 0.85rem; }
   font-size: 14px;
 }
 
-@media (max-width: 720px) {
-  .nav-shell { min-height: 54px; }
-  .top-nav { gap: 14px; font-size: 13px; }
-  .top-nav a:nth-child(2) { display: none; }
-
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 22px;
-    padding-top: 42px;
-  }
-  .portrait-wrap {
-    grid-row: 1;
-    justify-self: start;
-  }
-  .portrait { width: 118px; height: 118px; }
-  .hero h1 { font-size: 2.65rem; }
-  .hero-role { font-size: 16px; }
-
-  .section { padding: 27px 0; }
-  .section h2 { font-size: 22px; }
-  .research-line span { display: block; margin-bottom: 2px; }
-
-  .news-row,
-  .publication,
-  .honor-row {
-    grid-template-columns: 1fr;
-    gap: 2px;
-  }
-  .publication { padding: 19px 0; }
-  .pub-year { padding-top: 0; }
-  .two-column-meta { grid-template-columns: 1fr; gap: 18px; }
-  .footer-inner { align-items: flex-start; flex-direction: column; justify-content: center; gap: 2px; padding: 22px 0; }
-}
-
-@media (max-width: 460px) {
-  .page, .nav-shell { width: min(calc(100% - 28px), var(--max-width)); }
-  .top-nav { gap: 11px; }
-  .top-nav a:nth-child(4) { display: none; }
-  .section-title-row { align-items: flex-start; }
-}
-
-/* Selected work: adds visual rhythm without relying on external image hosts. */
 .highlight-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -419,6 +425,48 @@ p { margin: 0 0 0.85rem; }
 .highlight-body a { font-size: 13px; font-weight: 600; }
 
 @media (max-width: 720px) {
+  .nav-shell { min-height: 54px; }
+  .top-nav { gap: 14px; font-size: 13px; }
+  .top-nav a:nth-child(2) { display: none; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding-top: 42px;
+  }
+  .portrait-wrap {
+    grid-row: 1;
+    justify-self: start;
+  }
+  .portrait { width: 118px; height: 118px; }
+  .hero h1 { font-size: 2.65rem; }
+  .hero-role { font-size: 16px; }
+
+  .section { padding: 27px 0; }
+  .section h2 { font-size: 22px; }
+  .research-line span { display: block; margin-bottom: 2px; }
+
+  .news-row,
+  .publication,
+  .honor-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .publication { padding: 19px 0; }
+  .publication:first-child { padding-top: 15px; }
+  .pub-year { padding-top: 0; }
+  .pub-group-head { align-items: flex-start; }
+  .pub-count { padding-top: 3px; }
+  .two-column-meta { grid-template-columns: 1fr; gap: 18px; }
+  .footer-inner { align-items: flex-start; flex-direction: column; justify-content: center; gap: 2px; padding: 22px 0; }
   .highlight-grid { grid-template-columns: 1fr; }
   .highlight-visual { min-height: 132px; }
+}
+
+@media (max-width: 460px) {
+  .page, .nav-shell { width: min(calc(100% - 28px), var(--max-width)); }
+  .top-nav { gap: 11px; }
+  .top-nav a:nth-child(4) { display: none; }
+  .section-title-row { align-items: flex-start; }
+  .pub-count { display: none; }
 }
