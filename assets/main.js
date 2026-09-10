@@ -33,6 +33,16 @@ function shortVenue(venue = '') {
   return '';
 }
 
+function renderNewsTitle(item) {
+  const title = String(item.title || '');
+  const highlight = String(item.highlight || '');
+  if (!highlight || !title.includes(highlight)) return escapeHTML(title);
+
+  const [before, after] = title.split(highlight);
+  const accentClass = item.accent === 'red' ? 'news-accent-red' : 'news-accent-blue';
+  return `${escapeHTML(before)}<span class="${accentClass}">${escapeHTML(highlight)}</span>${escapeHTML(after)}`;
+}
+
 function renderNews(news) {
   const wrap = document.getElementById('newsList');
   const toggle = document.getElementById('newsToggle');
@@ -42,7 +52,7 @@ function renderNews(news) {
   wrap.innerHTML = sorted.map((item, index) => `
     <div class="news-row ${index >= visibleCount ? 'is-extra' : ''}" ${index >= visibleCount ? 'hidden' : ''}>
       <div class="news-date">${escapeHTML(item.date || '')}</div>
-      <div class="news-text">${escapeHTML(item.title || '')}</div>
+      <div class="news-text"><span class="news-emoji" aria-hidden="true">${escapeHTML(item.emoji || '•')}</span>${renderNewsTitle(item)}</div>
     </div>
   `).join('');
 
