@@ -4,23 +4,23 @@
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 9px;
 }
 
 .hero h1 {
   font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
   font-weight: 700;
-  letter-spacing: -0.048em;
-  font-size: clamp(2.35rem, 5.2vw, 3.65rem);
+  letter-spacing: -0.045em;
+  font-size: clamp(2.05rem, 4.4vw, 3.15rem);
   line-height: 1;
 }
 
 .nickname {
-  color: #8a8f97;
+  color: #737983;
   font-family: var(--sans);
-  font-size: 12.5px;
-  font-weight: 500;
-  letter-spacing: .01em;
+  font-size: 15px;
+  font-weight: 560;
+  letter-spacing: .005em;
 }
 
 .brand {
@@ -67,17 +67,12 @@
 .highlight-links { display: flex; gap: 12px; flex-wrap: wrap; }
 .highlight-links a { font-size: 13px; font-weight: 600; }
 
-/* News: explicit, high-contrast academic accents inspired by modern research homepages. */
+/* News: color is carried only by text; no pills, boxes, or borders. */
 .news-list {
   gap: 4px;
 }
 .news-row {
-  padding: 7px 8px;
-  border-radius: 8px;
-  transition: background .15s ease;
-}
-.news-row:hover {
-  background: #f8fafc;
+  padding: 5px 0;
 }
 .news-date {
   color: #7b818a !important;
@@ -89,28 +84,23 @@
 }
 .news-emoji {
   display: inline-block;
-  width: 1.65em;
-  margin-right: 4px;
+  width: 1.55em;
+  margin-right: 3px;
   transform: translateY(1px);
 }
 .news-accent-blue,
 .news-accent-red {
-  display: inline;
-  padding: 1px 5px 2px;
-  border-radius: 5px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none !important;
   font-weight: 720 !important;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
 }
 .news-accent-blue {
-  color: #1257b8 !important;
-  background: #edf5ff;
-  box-shadow: inset 0 0 0 1px #d9eaff;
+  color: #1d5fbf !important;
 }
 .news-accent-red {
-  color: #b51f2e !important;
-  background: #fff0f1;
-  box-shadow: inset 0 0 0 1px #ffd8dc;
+  color: #b4232f !important;
 }
 
 /* Honors: all entries remain equal in size; only importance changes color/emphasis. */
@@ -195,8 +185,8 @@
 }
 
 @media (max-width: 720px) {
-  .hero h1 { font-size: 2.65rem; }
-  .nickname { font-size: 11.5px; }
+  .hero h1 { font-size: 2.35rem; }
+  .nickname { font-size: 13.5px; }
   .top-nav a:nth-child(2),
   .top-nav a:nth-child(3),
   .top-nav a:nth-child(5),
