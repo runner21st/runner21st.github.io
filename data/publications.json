@@ -1,6 +1,18 @@
 [
   {
     "category": "robotics",
+    "type": "conference",
+    "year": "2026",
+    "month": "06",
+    "title": "FTP-1: A Generalist Foundation Tactile Policy Across Tactile Sensors for Contact-Rich Manipulation",
+    "authors": ["Chengbo Yuan*", "Zicheng Zhang*", "Mingjie Zhou*", "Wendi Chen", "Yi Wang", "Zhuoyang Liu", "Dantong Niu", "Shuo Wang", "Hui Zhang", "Wenkang Zhang", "Yingdong Hu", "Yuanqing Gong", "Wanli Xing", "Chuan Wen", "Cewu Lu", "Kaifeng Zhang", "Yang Gao"],
+    "venue": "Conference on Robot Learning (CoRL 2026)",
+    "note": "Robotics, Tactile Foundation Policy, Contact-Rich Manipulation",
+    "pdf": "https://arxiv.org/pdf/2606.13102",
+    "project": "https://ftp1-policy.github.io/"
+  },
+  {
+    "category": "robotics",
     "type": "preprint",
     "year": "2026",
     "month": "06",
@@ -56,17 +68,6 @@
     "venue": "arXiv",
     "note": "Optimization, Large-Scale Training",
     "pdf": "https://arxiv.org/pdf/2605.03769"
-  },
-  {
-    "category": "other",
-    "type": "conference",
-    "year": "2026",
-    "month": "02",
-    "title": "SAGA: Structural Aggregation Guided Alignment with Dynamic View and Neighborhood Order Selection for Multiview Graph Domain Adaptation",
-    "authors": ["Ruiyi Fang", "Jingyu Zhao", "Shuo Wang", "Ruizhi Pu", "Bingheng Li", "Jiale Cai", "Zhihao Li", "Zihao Jing", "Jian Zhu", "Song Tang", "Charles Ling", "Boyu Wang"],
-    "venue": "The Fourteenth International Conference on Learning Representations (ICLR 2026)",
-    "note": "Graph Machine Learning, Representation Learning",
-    "pdf": "https://openreview.net/pdf?id=hC9Ny8iMLi"
   },
   {
     "category": "other",
