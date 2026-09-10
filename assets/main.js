@@ -56,38 +56,78 @@ function renderNews(news) {
   }
 }
 
-function renderPublications(publications) {
-  const wrap = document.getElementById('pubList');
-  const sorted = [...publications].sort((a, b) => {
+function renderPublication(pub) {
+  const links = [
+    ['Paper', pub.pdf],
+    ['Code', pub.code],
+    ['Project', pub.project],
+    ['Slides', pub.slides],
+    ['BibTeX', pub.bibtex],
+    ['X', pub['X project']]
+  ].filter(([, href]) => href);
+
+  const venue = escapeHTML(pub.venue || '');
+  const badge = shortVenue(pub.venue || '');
+
+  return `
+    <article class="publication">
+      <div class="pub-year">${escapeHTML(pub.year || '')}</div>
+      <div>
+        <h3 class="pub-title">${escapeHTML(pub.title || 'Untitled')}</h3>
+        <div class="pub-authors">${formatAuthors(pub.authors)}</div>
+        <div class="pub-venue">${badge ? `<span class="venue-badge">${badge}</span>` : ''}${venue}</div>
+        ${pub.note ? `<div class="pub-note">${escapeHTML(pub.note)}</div>` : ''}
+        ${links.length ? `<div class="pub-links">${links.map(([label, href]) => `<a href="${escapeHTML(href)}" target="_blank" rel="noreferrer">${label}</a>`).join('')}</div>` : ''}
+      </div>
+    </article>
+  `;
+}
+
+function sortPublications(publications) {
+  return [...publications].sort((a, b) => {
     const left = `${b.year || ''}${b.month || ''}`;
     const right = `${a.year || ''}${a.month || ''}`;
     return left.localeCompare(right);
   });
+}
 
-  wrap.innerHTML = sorted.map((pub) => {
-    const links = [
-      ['Paper', pub.pdf],
-      ['Code', pub.code],
-      ['Project', pub.project],
-      ['Slides', pub.slides],
-      ['BibTeX', pub.bibtex],
-      ['X', pub['X project']]
-    ].filter(([, href]) => href);
+function renderPublications(publications) {
+  const wrap = document.getElementById('pubList');
+  const groups = [
+    {
+      key: 'robotics',
+      title: 'Robotics',
+      label: 'Major',
+      description: 'Embodied AI · Robot Learning · Vision-Language-Action Models'
+    },
+    {
+      key: 'other',
+      title: 'Other Research',
+      label: '',
+      description: 'Graph Learning · Representation Learning · Foundation Models · Optimization'
+    }
+  ];
 
-    const venue = escapeHTML(pub.venue || '');
-    const badge = shortVenue(pub.venue || '');
+  wrap.innerHTML = groups.map((group) => {
+    const papers = sortPublications(publications.filter((pub) => (pub.category || 'other') === group.key));
+    if (!papers.length) return '';
 
     return `
-      <article class="publication">
-        <div class="pub-year">${escapeHTML(pub.year || '')}</div>
-        <div>
-          <h3 class="pub-title">${escapeHTML(pub.title || 'Untitled')}</h3>
-          <div class="pub-authors">${formatAuthors(pub.authors)}</div>
-          <div class="pub-venue">${badge ? `<span class="venue-badge">${badge}</span>` : ''}${venue}</div>
-          ${pub.note ? `<div class="pub-note">${escapeHTML(pub.note)}</div>` : ''}
-          ${links.length ? `<div class="pub-links">${links.map(([label, href]) => `<a href="${escapeHTML(href)}" target="_blank" rel="noreferrer">${label}</a>`).join('')}</div>` : ''}
+      <section class="publication-group" aria-labelledby="pub-group-${group.key}">
+        <div class="pub-group-head">
+          <div>
+            <h3 id="pub-group-${group.key}" class="pub-group-title">
+              ${escapeHTML(group.title)}
+              ${group.label ? `<span class="major-label">${escapeHTML(group.label)}</span>` : ''}
+            </h3>
+            <p class="pub-group-description">${escapeHTML(group.description)}</p>
+          </div>
+          <span class="pub-count">${papers.length} ${papers.length === 1 ? 'paper' : 'papers'}</span>
         </div>
-      </article>
+        <div class="publication-list">
+          ${papers.map(renderPublication).join('')}
+        </div>
+      </section>
     `;
   }).join('');
 }
