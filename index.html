@@ -8,8 +8,8 @@
   <title>Shuo Wang</title>
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/style.css?v=20260911g" />
-  <link rel="stylesheet" href="assets/polish.css?v=20260911g" />
+  <link rel="stylesheet" href="assets/style.css?v=20260911h" />
+  <link rel="stylesheet" href="assets/polish.css?v=20260911h" />
   <style>
     .name-row{display:flex;align-items:baseline;flex-wrap:wrap;gap:9px}
     .hero h1{font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif!important;font-size:clamp(1.9rem,4vw,2.85rem)!important;line-height:1!important;font-weight:700!important;letter-spacing:-.04em!important}
@@ -20,23 +20,25 @@
     .news-accent-blue{color:#1d5fbf!important}
     .news-accent-red{color:#b4232f!important}
 
-    .education-item{display:grid!important;grid-template-columns:84px minmax(0,1fr)!important;gap:22px!important;align-items:center!important}
+    .education-item{display:grid!important;grid-template-columns:92px minmax(0,1fr)!important;gap:22px!important;align-items:center!important}
     .education-logo-wrap{display:flex;align-items:center;justify-content:center}
-    .edu-logo-link{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
-    .edu-logo{width:64px;height:64px;display:block;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(30,41,59,.08))}
+    .edu-logo-link{display:flex;align-items:center;justify-content:center;width:76px;height:76px;border-radius:50%;overflow:hidden;text-decoration:none;background:#fff}
+    .edu-logo{width:100%;height:100%;display:block;object-fit:cover;filter:none}
+    .edu-logo-thu{transform:scale(1.42)}
+    .edu-logo-uestc{transform:scale(1.34)}
     .edu-title-line{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;margin:0 0 3px!important}
     .edu-years{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#818894;font-size:13px;font-weight:560;letter-spacing:.01em}
 
     @media(max-width:720px){
       .hero h1{font-size:2.15rem!important}
       .nickname{font-size:16px!important}
-      .education-item{grid-template-columns:64px minmax(0,1fr)!important;gap:16px!important;align-items:start!important}
-      .edu-logo{width:50px;height:50px}
+      .education-item{grid-template-columns:68px minmax(0,1fr)!important;gap:15px!important;align-items:center!important}
+      .edu-logo-link{width:58px;height:58px}
       .edu-title-line{gap:6px}
       .edu-years{font-size:12px}
     }
   </style>
-  <script defer src="assets/main.js?v=20260911g"></script>
+  <script defer src="assets/main.js?v=20260911h"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -106,7 +108,7 @@
         <article class="education-item">
           <div class="education-logo-wrap">
             <a class="edu-logo-link" href="https://www.tsinghua.edu.cn/en/" target="_blank" rel="noreferrer" aria-label="Tsinghua University">
-              <img class="edu-logo" src="https://vi.tsinghua.edu.cn/__local/8/1C/21/2F02A66E31BF084FE340463BB47_B9A95F73_185BC.jpg" alt="Tsinghua University emblem" />
+              <img class="edu-logo edu-logo-thu" src="https://vi.tsinghua.edu.cn/__local/8/1C/21/2F02A66E31BF084FE340463BB47_B9A95F73_185BC.jpg" alt="Tsinghua University emblem" />
             </a>
           </div>
           <div class="education-body">
@@ -118,7 +120,7 @@
         <article class="education-item">
           <div class="education-logo-wrap">
             <a class="edu-logo-link" href="https://en.uestc.edu.cn/" target="_blank" rel="noreferrer" aria-label="University of Electronic Science and Technology of China">
-              <img class="edu-logo" src="https://news.uestc.edu.cn/__local/E/C0/05/725012B7F439624B6809EE39EE8_9031447C_1A30E.png?e=.png" alt="UESTC emblem" />
+              <img class="edu-logo edu-logo-uestc" src="https://news.uestc.edu.cn/__local/E/C0/05/725012B7F439624B6809EE39EE8_9031447C_1A30E.png?e=.png" alt="UESTC emblem" />
             </a>
           </div>
           <div class="education-body">
