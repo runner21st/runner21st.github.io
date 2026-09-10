@@ -1,5 +1,6 @@
 async function loadJSON(path) {
-  const response = await fetch(path);
+  const separator = path.includes('?') ? '&' : '?';
+  const response = await fetch(`${path}${separator}v=20260911c`, { cache: 'no-store' });
   if (!response.ok) throw new Error(`Failed to load ${path}`);
   return response.json();
 }
@@ -38,7 +39,9 @@ function renderNewsTitle(item) {
   const highlight = String(item.highlight || '');
   if (!highlight || !title.includes(highlight)) return escapeHTML(title);
 
-  const [before, after] = title.split(highlight);
+  const index = title.indexOf(highlight);
+  const before = title.slice(0, index);
+  const after = title.slice(index + highlight.length);
   const accentClass = item.accent === 'red' ? 'news-accent-red' : 'news-accent-blue';
   return `${escapeHTML(before)}<span class="${accentClass}">${escapeHTML(highlight)}</span>${escapeHTML(after)}`;
 }
@@ -52,7 +55,7 @@ function renderNews(news) {
   wrap.innerHTML = sorted.map((item, index) => `
     <div class="news-row ${index >= visibleCount ? 'is-extra' : ''}" ${index >= visibleCount ? 'hidden' : ''}>
       <div class="news-date">${escapeHTML(item.date || '')}</div>
-      <div class="news-text"><span class="news-emoji" aria-hidden="true">${escapeHTML(item.emoji || '•')}</span>${renderNewsTitle(item)}</div>
+      <div class="news-text"><span class="news-emoji" aria-hidden="true">${escapeHTML(item.emoji || '✨')}</span>${renderNewsTitle(item)}</div>
     </div>
   `).join('');
 
