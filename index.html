@@ -8,9 +8,21 @@
   <title>Shuo Wang</title>
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/style.css?v=20260911c" />
-  <link rel="stylesheet" href="assets/polish.css?v=20260911c" />
-  <script defer src="assets/main.js?v=20260911c"></script>
+  <link rel="stylesheet" href="assets/style.css?v=20260911d" />
+  <link rel="stylesheet" href="assets/polish.css?v=20260911d" />
+  <style>
+    /* Critical visual overrides kept inline so the hero/news changes are never hidden by stale CSS caches. */
+    .name-row{display:flex;align-items:baseline;flex-wrap:wrap;gap:9px}
+    .hero h1{font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif!important;font-size:clamp(1.9rem,4vw,2.85rem)!important;line-height:1!important;font-weight:700!important;letter-spacing:-.04em!important}
+    .nickname{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;font-size:16px!important;font-weight:600!important;color:#666d77!important;letter-spacing:0!important}
+    .news-row{padding:5px 0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+    .news-row:hover{background:transparent!important}
+    .news-accent-blue,.news-accent-red{padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;font-weight:720!important}
+    .news-accent-blue{color:#1d5fbf!important}
+    .news-accent-red{color:#b4232f!important}
+    @media(max-width:720px){.hero h1{font-size:2.15rem!important}.nickname{font-size:14px!important}}
+  </style>
+  <script defer src="assets/main.js?v=20260911d"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
