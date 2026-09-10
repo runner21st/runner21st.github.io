@@ -28,6 +28,7 @@ function shortVenue(venue = '') {
   if (v.includes('icra')) return 'ICRA';
   if (v.includes('aaai')) return 'AAAI';
   if (v.includes('iclr')) return 'ICLR';
+  if (v.includes('corl')) return 'CoRL';
   if (v.includes('arxiv')) return 'arXiv';
   return '';
 }
