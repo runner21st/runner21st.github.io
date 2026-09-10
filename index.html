@@ -1,155 +1,168 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shuo Wang · Academic Homepage</title>
-  <meta name="description" content="Academic homepage of YOUR NAME. Research, publications, projects, news." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="Shuo Wang — Embodied AI, robot learning, representation learning, and multimodal foundation models." />
+  <title>Shuo Wang</title>
+
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/style.css" />
   <script defer src="assets/main.js"></script>
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to homepage</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="layout">
-    <aside class="sidebar">
-      <div class="card">
-        <div class="avatar-wrap">
-          <img class="avatar" src="assets/avatar.jpg" alt="YOUR NAME portrait" />
-        </div>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#top">Shuo Wang</a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#honors">Honors</a>
+      </nav>
+    </div>
+  </header>
 
-        <h1 class="name">Shuo Wang</h1>
-        <div class="nickname">Runner21st</div>
-        <p class="title">Incoming PhD Student · Tsinghua University / IIIS</p>
+  <main id="main" class="page">
+    <section id="top" class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Academic Homepage</p>
+        <h1 id="page-title">Shuo Wang</h1>
+        <p class="hero-role">Incoming Ph.D. Student · IIIS, Tsinghua University</p>
 
-        <div class="links">
-          <a class="pill" href="mailto:runner21st@gmail.com" aria-label="Email">Email</a>
-          <a class="pill" href="https://scholar.google.com/citations?user=IZB5CEMAAAAJ&hl=zh-CN" target="_blank" rel="noreferrer">Scholar</a>
-          <a class="pill" href="https://github.com/runner21st" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
-
-        <div class="meta">
-          <div><span class="k">Location</span><span class="v">Beijing</span></div>
-          <div><span class="k">Interests</span><span class="v">Robotics · Representation Learning · MLLMs</span></div>
-        </div>
-
-        <nav class="nav">
-          <a href="#about">About</a>
-          <a href="#news">News</a>
-          <a href="#publications">Publications</a>
-          <a href="#projects">Projects</a>
-          <a href="#honors-and-awards">Honors & Awards</a>
-          <a href="#service">Service</a>
-          <a href="#misc">Misc</a>
-        </nav>
-
-        <div class="footer">
-          <span id="lastUpdated"></span>
-          <span class="sep">·</span>
-          <!-- <a href="assets/CV.pdf" target="_blank" rel="noreferrer">CV</a> -->
+        <div class="hero-links" aria-label="Profile links">
+          <a href="mailto:runner21st@gmail.com">Email</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://scholar.google.com/citations?user=IZB5CEMAAAAJ&hl=zh-CN" target="_blank" rel="noreferrer">Google Scholar</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://github.com/runner21st" target="_blank" rel="noreferrer">GitHub</a>
+          <span aria-hidden="true">·</span>
+          <a href="assets/CV.pdf" target="_blank" rel="noreferrer">CV</a>
         </div>
       </div>
-    </aside>
 
-    <main id="main" class="content">
-      <section id="about" class="section">
-        <h2>About</h2>
-        <p>
-          I am a final-year undergraduate student in the Everest Class, UESTC, supervised by Prof.Zhao Kang.
-          I will join Institute for Interdisciplinary Information Sciences (IIIS), Tsinghua University this summer, advised by Prof.Yang Gao.  I'm also an intern at Spirit AI.
-        </p>
-        <p>
-          My research focuses on Embodied AI, a frontier domain at the intersection of machine learning, robotics and computer vision. I'm also interested in Representation Learning and Learning theory.
-          My research objective is to develop logically complete intelligent agents capable of fundamentally transforming human ways of life.        
-        </p>
-      </section>
+      <figure class="portrait-wrap">
+        <img class="portrait" src="assets/avatar.jpg" alt="Portrait of Shuo Wang" />
+      </figure>
+    </section>
 
-      <section id="news" class="section">
-        <div class="section-head">
-          <h2>News</h2>
-          <button class="btn" data-action="toggle-all" data-target="newsList">Unfold</button>
+    <section id="about" class="section section-about">
+      <p>
+        I am a final-year undergraduate student in the Everest Class at UESTC, supervised by
+        <strong>Prof. Zhao Kang</strong>. I will join the
+        <a href="https://iiis.tsinghua.edu.cn/" target="_blank" rel="noreferrer">Institute for Interdisciplinary Information Sciences (IIIS)</a>,
+        Tsinghua University, advised by <strong>Prof. Yang Gao</strong>. I am also an intern at Spirit AI.
+      </p>
+      <p>
+        My research focuses on <strong>Embodied AI</strong>, especially robot learning and multimodal foundation models.
+        I am also interested in representation learning and learning theory. My long-term goal is to build intelligent agents
+        that can reason, learn, and act robustly in the physical world.
+      </p>
+      <p class="research-line"><span>Research interests</span> Embodied AI · Robot Learning · Representation Learning · Multimodal Foundation Models</p>
+    </section>
+
+    <section id="news" class="section">
+      <div class="section-title-row">
+        <h2><span class="section-icon">🔥</span> News</h2>
+        <button id="newsToggle" class="text-button" type="button" hidden>Show all</button>
+      </div>
+      <div id="newsList" class="news-list" aria-live="polite"></div>
+    </section>
+
+    <section class="section highlights-section" aria-labelledby="highlights-title">
+      <h2 id="highlights-title"><span class="section-icon">✨</span> Highlights</h2>
+      <div class="highlight-grid">
+        <article class="highlight-card">
+          <div class="highlight-visual tactile-visual" aria-hidden="true">
+            <span>TACTILE</span><b>×</b><span>VLA</span>
+          </div>
+          <div class="highlight-body">
+            <p class="highlight-kicker">Embodied AI · 2025</p>
+            <h3>Tactile-VLA</h3>
+            <p>Exploring how vision-language-action models can generalize physical knowledge through tactile supervision.</p>
+            <a href="https://arxiv.org/abs/2507.09160" target="_blank" rel="noreferrer">Paper ↗</a>
+          </div>
+        </article>
+        <article class="highlight-card">
+          <div class="highlight-visual simreal-visual" aria-hidden="true">
+            <span>SIM</span><b>↔</b><span>REAL</span>
+          </div>
+          <div class="highlight-body">
+            <p class="highlight-kicker">Robotics · ICRA 2026</p>
+            <h3>Best of Sim and Real</h3>
+            <p>Decoupling control learning in simulation from real-world perception for visuomotor manipulation.</p>
+            <a href="https://arxiv.org/abs/2509.25747" target="_blank" rel="noreferrer">Paper ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="section-title-row">
+        <h2><span class="section-icon">📚</span> Publications</h2>
+        <a class="section-link" href="https://scholar.google.com/citations?user=IZB5CEMAAAAJ&hl=zh-CN" target="_blank" rel="noreferrer">Google Scholar ↗</a>
+      </div>
+      <p class="section-note">* denotes equal contribution.</p>
+      <div id="pubList" class="publication-list" aria-live="polite"></div>
+    </section>
+
+    <section id="honors" class="section">
+      <h2><span class="section-icon">🎖</span> Honors &amp; Awards</h2>
+      <div class="honor-list">
+        <div class="honor-row">
+          <div class="honor-year">2026</div>
+          <div>Outstanding Role Model Award, UESTC</div>
         </div>
-        <div id="newsList" class="list"></div>
-      </section>
-
-      <section id="publications" class="section">
-        <div class="section-head">
-          <h2>Publications</h2>
-          <div class="controls">
-            <input class="input" id="pubSearch" placeholder="Plz search title/author/venue…" />
-            <select class="select" id="pubFilter">
-              <option value="all">ALL</option>
-              <option value="conference">Conference</option>
-              <option value="journal">Journal</option>
-              <option value="preprint">Preprint</option>
-              <option value="workshop">Workshop</option>
-            </select>
+        <div class="honor-row">
+          <div class="honor-year">2025</div>
+          <div>
+            <p>Outstanding Graduate Student of UESTC <span class="muted">(Top 10 / 5,000+)</span></p>
+            <p>First-Class Outstanding Student Scholarship of UESTC, 2024–2025</p>
+            <p>Highest Honor Award, CCF Graph Machine Learning Conference</p>
+            <p>YanBao Corporate Scholarship, 2024–2025</p>
           </div>
         </div>
-        <div id="pubList" class="list"></div>
-      </section>
-
-      <section id="honors-and-awards" class="section">
-        <h2>Honors & Awards</h2>
-
-        <ul class="honor-list">
-          <li class="honor-item">
-            <div class="honor-year">2026</div>
-            <div class="honor-body">
-              <div class="honor-line">Outstanding Role Model Award, UESTC</div>
-            </div>
-          </li>
-
-          <li class="honor-item">
-            <div class="honor-year">2025</div>
-            <div class="honor-body">
-              <div class="honor-line">Outstanding Graduate Student of UESTC (Top 10 / 5000+)</div>
-              <div class="honor-line">First-Class Outstanding Student Scholarship of UESTC, 2024–2025</div>
-              <div class="honor-line">Highest Honor Award, CCF Graph Machine Learning Conference</div>
-              <div class="honor-line">YanBao Corporate Scholarship, 2024–2025</div>
-            </div>
-          </li>
-
-          <li class="honor-item">
-            <div class="honor-year">2024</div>
-            <div class="honor-body">
-              <div class="honor-line">National Scholarship, 2023–2024</div>
-              <div class="honor-line">First-Class Outstanding Student Scholarship of UESTC, 2023–2024</div>
-              <div class="honor-line">IEEEXtreme Programming Award — Silver Medal (China), Global Rank 12 / 17000+ teams</div>
-            </div>
-          </li>
-
-          <li class="honor-item">
-            <div class="honor-year">2023</div>
-            <div class="honor-body">
-              <div class="honor-line">National Scholarship, 2022–2023</div>
-              <div class="honor-line">First-Class Outstanding Student Scholarship of UESTC, 2022–2023</div>
-              <div class="honor-line">Everest Program (珠峰计划) Honor Class</div>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-
-      <section id="service" class="section">
-        <h2>Service</h2>
-        <ul class="bullets">
-          <li>Reviewer: ICLR 2026</li>
-        </ul>
-      </section>
-
-      <section id="misc" class="section">
-        <h2>Misc</h2>
-        <p>
-           Interested in literature and history. Feel free to contact me and communicate!
-        </p>
-        <div class="tiny">
-          © <span id="year"></span> Shuo Wang · Built with pure HTML/CSS/JS · Hosted on GitHub Pages
+        <div class="honor-row">
+          <div class="honor-year">2024</div>
+          <div>
+            <p>National Scholarship, 2023–2024</p>
+            <p>First-Class Outstanding Student Scholarship of UESTC, 2023–2024</p>
+            <p>IEEEXtreme Programming Award — Silver Medal (China), Global Rank 12 / 17,000+ teams</p>
+          </div>
         </div>
-      </section>
-    </main>
-  </div>
+        <div class="honor-row">
+          <div class="honor-year">2023</div>
+          <div>
+            <p>National Scholarship, 2022–2023</p>
+            <p>First-Class Outstanding Student Scholarship of UESTC, 2022–2023</p>
+            <p>Everest Program (珠峰计划) Honor Class</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact-section">
+      <div class="two-column-meta">
+        <div>
+          <h2>Service</h2>
+          <p>Reviewer: ICLR 2026</p>
+        </div>
+        <div>
+          <h2>Misc</h2>
+          <p>Interested in literature and history. Feel free to reach out and chat.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page footer-inner">
+      <span>© <span id="year"></span> Shuo Wang</span>
+      <span>Built with plain HTML/CSS/JS · Hosted on GitHub Pages</span>
+    </div>
+  </footer>
 </body>
 </html>
