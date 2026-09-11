@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://runner21st.github.io/sitemap.xml
